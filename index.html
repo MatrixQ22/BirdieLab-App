@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f2"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="BirdieLab">
+<meta name="description" content="BirdieLab golf performance and shot tracking.">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icon.svg">
+<link rel="stylesheet" href="./styles.css"><title>BirdieLab — Golf Performance</title></head>
+<body><div class="app-shell">
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">B</span><span class="brand-name">BIRDIELAB</span></a>
+<div class="top-actions"><span class="session-label" id="sessionDate">PRACTICE SESSION</span><button class="icon-button" id="themeToggle" aria-label="Toggle appearance">◐</button></div></header>
+<main><section class="intro"><div><p class="eyebrow">GOLF PERFORMANCE SYSTEM</p><h1>Know your<br><em>numbers.</em></h1></div><p class="intro-copy">A clearer picture of every shot.<br>Built around your game.</p></section>
+<nav class="tabs"><button class="tab active" data-view="monitor">MONITOR</button><button class="tab" data-view="history">SHOT LOG</button><button class="tab" data-view="bag">MY BAG</button></nav>
+<section class="view active" id="monitorView">
+<div class="section-heading"><div><p class="eyebrow">01 / SESSION</p><h2>Launch monitor</h2></div><span class="status"><i></i> READY</span></div>
+<div class="camera-panel"><video id="cameraPreview" autoplay muted playsinline></video><div class="camera-placeholder" id="cameraPlaceholder"><div class="camera-symbol">◎</div><strong>Camera preview</strong><span>Position your phone safely behind or beside the hitting area.</span></div>
+<div class="camera-overlay"><span id="cameraState">CAMERA OFF</span><span class="rec-indicator" id="recIndicator">● REC</span></div>
+<div class="camera-controls"><button class="button button-light" id="cameraStart">ENABLE CAMERA</button><button class="button button-outline-light" id="recordButton" disabled>RECORD CLIP</button><button class="button button-outline-light" id="cameraStop" disabled>STOP CAMERA</button></div></div>
+<p class="fine-print" id="cameraMessage">Camera access requires HTTPS and your permission. Recording availability depends on browser support.</p>
+<div class="club-select-row"><div><p class="eyebrow">CURRENT CLUB</p><h3 id="selectedClubName">Driver</h3></div><label class="select-wrap"><span class="sr-only">Select club</span><select id="clubSelect" aria-label="Select club"><option>Driver</option><option>3 Wood</option><option>7 Wood</option><option>3 Iron</option><option>4 Iron</option><option>5 Iron</option><option>6 Iron</option><option>7 Iron</option><option>8 Iron</option><option>9 Iron</option><option>PW (46°)</option><option>50°</option><option>54°</option><option>58°</option><option>Putter</option></select></label></div>
+<div class="metric-grid"><div class="metric"><span class="eyebrow">BALL SPEED</span><strong id="lastBallSpeed">—</strong><small>MPH</small></div><div class="metric"><span class="eyebrow">CARRY</span><strong id="lastCarry">—</strong><small>YARDS</small></div><div class="metric"><span class="eyebrow">LAUNCH</span><strong id="lastLaunch">—</strong><small>DEGREES</small></div><div class="metric"><span class="eyebrow">DIRECTION</span><strong id="lastDirection">—</strong><small>LEFT / RIGHT</small></div></div>
+<p class="data-note">Metrics are blank until entered. Manual entries are not camera-verified measurements.</p>
+<div class="entry-card"><div class="section-heading compact"><div><p class="eyebrow">02 / SHOT DATA</p><h2>Log a shot</h2></div><span class="entry-number" id="shotCount">00</span></div>
+<form id="shotForm"><div class="form-grid">
+<label>Ball speed <span>MPH</span><input id="ballSpeed" type="number" min="0" max="250" step="0.1" placeholder="—" inputmode="decimal"></label>
+<label>Carry <span>YARDS</span><input id="carry" type="number" min="0" max="500" step="1" placeholder="—" inputmode="decimal"></label>
+<label>Launch angle <span>DEGREES</span><input id="launch" type="number" min="-10" max="60" step="0.1" placeholder="—" inputmode="decimal"></label>
+<label>Direction <span>DEGREES</span><input id="direction" type="number" min="-45" max="45" step="0.1" placeholder="0 = straight" inputmode="decimal"></label></div>
+<label class="notes-label">Shot notes<textarea id="notes" rows="2" placeholder="Strike, shape, conditions..."></textarea></label>
+<button class="button button-primary full" type="submit">SAVE SHOT <span>＋</span></button></form></div>
+<div class="summary-strip"><div><span class="eyebrow">SESSION SHOTS</span><strong id="totalShots">0</strong></div><div><span class="eyebrow">AVG. CARRY</span><strong id="averageCarry">—</strong></div><div><span class="eyebrow">LONGEST</span><strong id="longestCarry">—</strong></div></div></section>
+<section class="view" id="historyView"><div class="section-heading"><div><p class="eyebrow">03 / PERFORMANCE</p><h2>Shot log</h2></div><button class="text-button" id="exportCsv">EXPORT CSV ↗</button></div><div class="history-list" id="historyList"><div class="empty-state">Your recorded shots will appear here.</div></div><button class="button button-secondary full" id="clearHistory">CLEAR SHOT HISTORY</button></section>
+<section class="view" id="bagView"><div class="section-heading"><div><p class="eyebrow">04 / EQUIPMENT</p><h2>My bag</h2></div></div><p class="body-copy">Your current setup is preloaded. Use the club selector during practice to build a distance profile for each club.</p><div class="bag-list" id="bagList"></div></section></main>
+<footer><span>BIRDIELAB</span><span>MEASURE EVERY SHOT. UNDERSTAND EVERY YARD.</span></footer></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div><script src="./app.js"></script></body></html>
