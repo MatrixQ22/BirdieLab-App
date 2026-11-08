@@ -38,3 +38,9 @@ Upload the updated files from this package to the same repository root and commi
 - Requests a portrait 9:16 camera stream where supported.
 - Uses crop-and-scale where supported and fills the portrait preview frame, cropping a landscape source rather than letterboxing it.
 - Updates the service-worker cache version so the new camera styling and behavior are picked up after deployment.
+
+
+## v1.3 iPhone camera orientation fix
+- Detects landscape camera streams and rotates the live preview 90 degrees to fill the portrait frame.
+- Recalculates preview geometry when the device orientation or viewport changes.
+- This fixes the live preview; native recorded clip orientation may still vary by iPhone/browser.

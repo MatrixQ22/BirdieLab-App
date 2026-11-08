@@ -5,6 +5,7 @@
 /* Portrait-first camera presentation */
 .camera-panel{width:min(100%,430px);height:auto;aspect-ratio:9/16;max-height: min(76vh,680px);margin:0 auto;background:#171a18}
 .camera-panel video{width:100%;height:100%;object-fit:cover;object-position:center;background:#111}
+.camera-panel.camera-rotated video{position:absolute;left:50%;top:50%;max-width:none;max-height:none;transform:translate(-50%,-50%) rotate(90deg);object-fit:cover}
 .camera-placeholder{background:linear-gradient(160deg,#292d29,#171a18)}
 .camera-controls{justify-content:center}
 .guide-card{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:19px 0;border-top:1px solid var(--line)}
