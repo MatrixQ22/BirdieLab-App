@@ -23,3 +23,12 @@ This is the first functional interface and practice-log release, not yet an auto
 6. In Safari, tap Share → Add to Home Screen.
 
 Camera access requires HTTPS; GitHub Pages provides HTTPS. Shot data is stored locally in the browser on the device and is not synced between devices. Export CSV periodically to back it up.
+
+
+## Version 1.1 update
+- Added an in-app HOW TO guide with safe phone placement, framing, lighting and repeatable practice tips.
+- Camera preview is portrait-first (9:16) and requests a portrait capture format where supported.
+- PWA manifest requests portrait orientation. Some iOS Safari camera/browser behavior may ignore capture constraints; this does not guarantee a particular frame rate or automatic launch measurements.
+
+### Updating the live GitHub Pages app
+Upload the updated files from this package to the same repository root and commit the changes. Replace files with the same names. Then reload the app in Safari; if the installed Home Screen version shows the old build, close it fully and reopen after the service worker refreshes, or clear Safari website data for the site.
