@@ -32,3 +32,9 @@ Camera access requires HTTPS; GitHub Pages provides HTTPS. Shot data is stored l
 
 ### Updating the live GitHub Pages app
 Upload the updated files from this package to the same repository root and commit the changes. Replace files with the same names. Then reload the app in Safari; if the installed Home Screen version shows the old build, close it fully and reopen after the service worker refreshes, or clear Safari website data for the site.
+
+
+## v1.2 camera orientation update
+- Requests a portrait 9:16 camera stream where supported.
+- Uses crop-and-scale where supported and fills the portrait preview frame, cropping a landscape source rather than letterboxing it.
+- Updates the service-worker cache version so the new camera styling and behavior are picked up after deployment.
