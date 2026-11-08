@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="#f5f5f2"/><rect x="55" y="55" width="402" height="402" fill="none" stroke="#20211f" stroke-width="14"/><path d="M165 360V150h111c69 0 108 35 108 93s-39 93-108 93h-42v24zm69-84h40c29 0 44-11 44-33s-15-33-44-33h-40z" fill="#20211f"/><path d="M355 360h-55" stroke="#b83d3d" stroke-width="16"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">BirdieLab app icon</title>
+  <desc id="desc">A bold white letter B with a red golf-ball flight arc on a graphite background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#242629"/>
+      <stop offset="1" stop-color="#090a0b"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a90f20"/>
+      <stop offset="1" stop-color="#f12b3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <path d="M142 94h145c75 0 117 36 117 91 0 39-22 68-58 82 48 12 76 45 76 91 0 68-53 109-139 109H142V94zm82 72v77h58c27 0 42-14 42-39 0-24-16-38-44-38h-56zm0 144v83h62c34 0 53-15 53-42 0-26-19-41-53-41h-62z" fill="#f5f5f2"/>
+  <path d="M75 353c91-102 204-158 345-153-119 17-207 68-286 165-19 23-40 26-59-12z" fill="url(#red)"/>
+  <circle cx="414" cy="196" r="31" fill="#f7f7f4" stroke="#d9d9d5" stroke-width="4"/>
+  <g fill="#a7a9a8">
+    <circle cx="402" cy="181" r="3.5"/><circle cx="416" cy="176" r="3.5"/><circle cx="428" cy="185" r="3.5"/>
+    <circle cx="397" cy="197" r="3.5"/><circle cx="412" cy="193" r="3.5"/><circle cx="428" cy="202" r="3.5"/>
+    <circle cx="405" cy="211" r="3.5"/><circle cx="419" cy="216" r="3.5"/>
+  </g>
+</svg>
